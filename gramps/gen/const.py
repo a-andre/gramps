@@ -32,6 +32,7 @@ Provides constants for other modules
 #-------------------------------------------------------------------------
 import os
 import sys
+import tempfile
 import uuid
 
 #-------------------------------------------------------------------------
@@ -122,7 +123,7 @@ TOOL_OPTIONS = os.path.join(HOME_DIR, "tool_options.xml")
 PLACE_FORMATS = os.path.join(HOME_DIR, "place_formats.xml")
 
 ENV_DIR = os.path.join(HOME_DIR, "env")
-TEMP_DIR = os.path.join(HOME_DIR, "temp")
+TEMP_DIR = tempfile.mkdtemp(prefix="gramps-")
 THUMB_DIR = os.path.join(HOME_DIR, "thumb")
 THUMB_NORMAL = os.path.join(THUMB_DIR, "normal")
 THUMB_LARGE = os.path.join(THUMB_DIR, "large")
